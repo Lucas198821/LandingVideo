@@ -19,8 +19,8 @@
     color:#fff ;
     z-index: 2;
 }
-.nav__ul{
-    display: none;
+.section.active{
+    right: 300px;
 }
 .section__header{
 position: absolute;
@@ -73,17 +73,25 @@ cursor: pointer;
     letter-spacing: -0.9px;
     line-height: 23px;
 }
-.body__a {
-    background-image: linear-gradient(to right, #ffffff, #a5a5a5);
-border-radius: 10px;
-color: #535D51;
-padding: 10px 20px;
-text-decoration: none;
-font-size: 25px;
-font-style:normal;
-font-weight: 400;
-line-height: normal;
+
+.body__a{
+    background-color: rgba(255, 255, 255, 255);
+    display: inline-block;
+    font-size: 1em;
+    padding: 0.625rem 1.875rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition:.3s ease all ;
 }
+.body__a:hover {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+
 .body__video{
     position: absolute;
     top: 0;
@@ -94,12 +102,76 @@ line-height: normal;
     opacity: 0.8;
     z-index: -1;
 }
+.nav__ul{
+    position: absolute;
+    top: 250px;
+    right: -250px;
+    color: black;
+    list-style:none ;
+    font-size: 40px;
+    font-weight:400;
+    
+}
 .footer{
 position: inherit;
 bottom: 3.125rem;
 }
 
 .footer img{
-    width: 40px;
+    width: 60px;
     padding: 5px;
+    margin: 5px;
+}
+.footer img:hover {
+    transform: scale(0.9) translateY(-9px);
+    transition:.4s ease all ;
+}
+
+@media (max-width: 1068px) {
+    /* Estilos para dispositivos con un ancho máximo de 768 píxeles o menos */
+    .section__a img {
+        width: 4em;
+    }
+
+    .body__h2 {
+        font-size: 5em;
+    }
+    .body__h3 {
+        font-size: 3em;
+    }
+    .body__p {
+        font-size: 1em;
+    }
+    .body__a {
+        font-size: 0.8em;
+    }
+    .footer img {
+        width: 3em;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos para dispositivos con un ancho máximo de 768 píxeles o menos */
+    .section__a img {
+        width: 3em;
+    }
+    
+    .body__h2 {
+        font-size: 3em;
+    }
+    .body__h3 {
+        font-size: 2em;
+    }
+    .body__p {
+        font-size: 0.8em;
+        letter-spacing: -0em;
+        line-height: 1em;
+    }
+    
+    .body__a {
+        font-size: 0.7em;
+    }
+    .footer img {
+        width: 2.8em;
+    }
 }
